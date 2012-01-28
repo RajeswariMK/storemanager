@@ -1,0 +1,8 @@
+<h1> Tagged with <%= @tag_name %> </h1>
+<ul>
+<% @tags_for_current_user.each do |tag| %>
+  
+  <li><%= link_to tag.url, store_path(tag.id) %> | <%= time_ago_in_words(tag.created_at) %> ago</li>
+<% end %>
+</ul>
+

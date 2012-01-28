@@ -1,0 +1,47 @@
+<!-- <h1>Listing stores</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @stores.each do |store| %>
+  <tr>
+    <td><%= store.url %></td>
+    <td><%= store.tag_list %></td>
+    <td><%= link_to 'Show', store %></td>
+    <td><%= link_to 'Edit', edit_store_path(store) %></td>
+    <td><%= link_to 'Destroy', store, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= store.tag_counts.count %> 
+    <% store.tag_counts_on(:tags).each do |tag|  %>
+      <%= tag.name %>
+    <% end %></td>
+  </tr>
+<% end %>
+</table>
+-->
+<br />
+<div class="left_container">
+<%= link_to 'Add new bookmark', new_store_path, :class => "button orange" %>
+<h1> Your recent bookmarks </h1>
+<div class = "url_list_box">
+ <ul>
+ <% @stores.each do |store| %>
+   <li class = "url_list">
+   URL:<%= link_to store.url, store %> <br />
+   Tags:<%= store.tag_list %> <br />
+   <span class="links"> <%= link_to 'Edit', edit_store_path(store) %> | <%= link_to 'Destroy', store, :confirm => 'Are you sure?', :method => :delete %> | <a href="<%= store.url %>" target="_new"> Go to Link </a></span> 
+   <span class="created_time"><%= time_ago_in_words(store.created_at) %> ago</span></li>
+ <% end %>
+ </ul> 
+</div>
+</div>
+<div class="right_container">
+<h1>Tags</h1>
+<div class="tag_cloud"><%= render :partial => "tag_cloud" %></div>
+</div>
+
