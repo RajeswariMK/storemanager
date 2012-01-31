@@ -1,5 +1,7 @@
 Storemanager::Application.routes.draw do
-  devise_for :users
+ 
+ # match 'auth/:provider/callback' => 'authentications#create'
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
  
   get 'tag/:id' => 'stores#tag', :as => :tag_list
   
@@ -8,7 +10,7 @@ Storemanager::Application.routes.draw do
   get 'tag_cloud' => 'stores#tag_cloud'
   
   resources :stores
-  root :to => "stores#index"
+  root :to => "facebook#canvas"
 
   
 end

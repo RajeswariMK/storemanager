@@ -1,0 +1,40 @@
+development:
+  app_id: 179354908831711
+  api_key: 179354908831711
+  secret_key: c4ca62180d3cad791913f45dbae24f3c
+  canvas_page_name: 
+  callback_url: http://192.168.1.9:3000/
+  pretty_errors: true
+  set_asset_host_to_callback_url: true
+  tunnel:
+    public_host_username: 
+    public_host: 
+    public_port: 4007
+    local_port: 3000
+    server_alive_interval: 0
+
+test:
+  api_key: 157256117722630 
+  secret_key: 96bfb931e3da41ebcff53757fcd09ebc
+  canvas_page_name: 
+  callback_url: https://storemanager.heroku.com/
+  set_asset_host_to_callback_url: true
+  tunnel:
+    public_host_username: 
+    public_host: 
+    public_port: 4007
+    local_port: 3000
+    server_alive_interval: 0
+
+production:
+  api_key: 157256117722630 
+  secret_key: 96bfb931e3da41ebcff53757fcd09ebc
+  canvas_page_name: 
+  callback_url: https://storemanager.heroku.com/ 
+  set_asset_host_to_callback_url: true   
+  tunnel:
+    public_host_username: 
+    public_host: 
+    public_port: 4007
+    local_port: 3000
+    server_alive_interval: 0
