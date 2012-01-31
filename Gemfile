@@ -9,6 +9,9 @@ gem 'mysql2', '0.2.17'
 gem 'jquery-rails'
 gem 'acts-as-taggable-on', '~>2.2.0'
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'fb_graph'
 
 # Use unicorn as the web server
 # gem 'unicorn'
